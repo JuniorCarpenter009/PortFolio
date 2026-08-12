@@ -17,7 +17,17 @@ export const socialLinks = [
 export const navigation = [
   { label: "About", href: "/#about" }, { label: "Work", href: "/#work" }, { label: "Jeicy Apps", href: "/#jeicy-apps" },
   { label: "Experience", href: "/#experience" }, { label: "Education", href: "/#education" }, { label: "Skills", href: "/#skills" },
+  { label: "Principles", href: "/#principles" },
   { label: "Contact", href: "/contact" },
+] as const;
+
+export const engineeringPrinciples = [
+  { title: "Clarity before complexity", detail: "Understand the problem, constraints, and desired outcome before choosing an architecture." },
+  { title: "Security is part of the design", detail: "Ownership, validation, secrets, and safe defaults belong in the foundation, not in a final checklist." },
+  { title: "Make decisions explainable", detail: "Code and product behavior should reveal intent so people can maintain, trust, and improve them." },
+  { title: "Deliver useful increments", detail: "Build the smallest coherent step that creates value while preserving room for responsible growth." },
+  { title: "Measure what improved", detail: "A technical change matters when its effect can be observed in reliability, speed, quality, or user experience." },
+  { title: "Protect what is entrusted", detail: "Useful storytelling never requires exposing confidential systems, data, or organizational details." },
 ] as const;
 
 export const products = [
