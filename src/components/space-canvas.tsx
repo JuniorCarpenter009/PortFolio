@@ -1,0 +1,1 @@
+export function SpaceCanvas() { return <div className="space-canvas" aria-hidden><div className="stars stars-one" /><div className="stars stars-two" /><div className="orbit orbit-one"><span /></div><div className="orbit orbit-two"><span /></div><div className="planet" /></div>; }

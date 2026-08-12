@@ -12,5 +12,5 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" suppressHydrationWarning><body className={`${sans.variable} ${mono.variable}`}><ThemeProvider>{children}</ThemeProvider></body></html>;
+  return <html lang="en" data-appearance="professional" suppressHydrationWarning><body className={`${sans.variable} ${mono.variable}`}><ThemeProvider>{children}</ThemeProvider></body></html>;
 }

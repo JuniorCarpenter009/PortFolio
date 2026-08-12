@@ -1,9 +1,10 @@
 import { ArrowDownRight, ArrowUpRight, Code2, Layers3, Mail, MapPin, Sparkles } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
+import { SpaceCanvas } from "@/components/space-canvas";
 import { expertise, products, profile, socialLinks } from "@/data/portfolio";
 
 export default function Home() {
-  return <><SiteHeader /><main id="top">
+  return <><SpaceCanvas /><SiteHeader /><main id="top">
     <section className="hero shell"><div className="hero-copy">
       <p className="eyebrow"><span /> Senior Full Stack Developer</p>
       <h1>I build software with <em>purpose, clarity,</em> and room to grow.</h1>
@@ -11,7 +12,7 @@ export default function Home() {
       <div className="hero-actions"><a className="button primary" href="#work">View selected work <ArrowDownRight size={17} /></a><a className="button secondary" href={`mailto:${profile.email}`}>Let&apos;s talk <Mail size={16} /></a></div>
       <div className="social-row">{socialLinks.map((item) => <a key={item.label} href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">{item.label} <ArrowUpRight size={13} /></a>)}</div>
     </div><aside className="identity-card" aria-label="Professional profile">
-      <div className="portrait-mark"><span>JRC</span></div><div><p className="micro-label">Based in</p><p className="location"><MapPin size={15} /> {profile.location}</p></div><div className="identity-rule" />
+      <div className="portrait-mark"><div className="helmet-ring"><span>JRC</span></div><small className="astronaut-label">MISSION: BUILD USEFUL THINGS</small></div><div><p className="micro-label">Based in</p><p className="location"><MapPin size={15} /> {profile.location}</p></div><div className="identity-rule" />
       <p className="availability"><span /> {profile.availability}</p><div className="identity-stats"><div><strong>8+</strong><span>Years in IT</span></div><div><strong>4+</strong><span>Years building software</span></div></div>
     </aside></section>
 
