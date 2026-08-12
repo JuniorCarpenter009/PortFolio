@@ -7,6 +7,7 @@ const commands = [
   { label: "About", detail: "Professional identity", href: "/#about" }, { label: "Selected work", detail: "Projects and verified outcomes", href: "/#work" },
   { label: "Jeicy Apps", detail: "Product ecosystem", href: "/#jeicy-apps" }, { label: "Experience", detail: "Professional timeline", href: "/#experience" },
   { label: "Skills", detail: "Technical capabilities", href: "/#skills" }, { label: "Engineering principles", detail: "How I approach the craft", href: "/#principles" },
+  { label: "Availability", detail: "Opportunities, location, and languages", href: "/#availability" },
   { label: "JC Finance", detail: "Product case study", href: "/projects/jc-finance" }, { label: "Contact", detail: "Start a conversation", href: "/contact" },
   { label: "Download CV", detail: "PDF document", href: "/documents/junior-rafael-carpenter-cv.pdf" },
 ] as const;

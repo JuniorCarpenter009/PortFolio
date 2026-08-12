@@ -1,7 +1,7 @@
 ﻿import { ArrowDownRight, ArrowUpRight, Code2, Layers3, Mail, MapPin, Sparkles } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { SpaceCanvas } from "@/components/space-canvas";
-import { certifications, education, engineeringPrinciples, experience, expertise, products, profile, skillGroups, socialLinks } from "@/data/portfolio";
+import { availabilityDetails, certifications, education, engineeringPrinciples, experience, expertise, products, profile, skillGroups, socialLinks } from "@/data/portfolio";
 import { professionalProjects } from "@/data/projects";
 import Link from "next/link";
 
@@ -36,7 +36,9 @@ export default function Home() {
 
     <section id="certifications" className="section shell"><div className="section-heading"><div><p className="section-number">08 / Certifications</p><h2>Continuous learning, applied deliberately.</h2></div><p>Selected certifications and courses confirmed in my professional profile. Issuers, dates, and credential links will be added only after individual verification.</p></div><div className="certification-grid">{certifications.map((item, index) => <article key={item.title}><span>0{index + 1}</span><p>{item.category}</p><h3>{item.title}</h3></article>)}</div></section>
 
-    <section id="contact" className="contact-section shell"><p className="section-number">09 / Contact</p><h2>Have a meaningful problem to solve?</h2><Link href="/contact">Start a conversation <ArrowUpRight /></Link></section>
+    <section id="availability" className="section shell"><div className="availability-card"><div className="availability-copy"><p className="section-number">09 / Availability</p><p className="availability"><span /> {profile.availability}</p><h2>Open to work that deserves thoughtful engineering.</h2><Link href="/contact">Discuss an opportunity <ArrowUpRight size={17} /></Link></div><dl>{availabilityDetails.map((item) => <div key={item.label}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div></section>
+
+    <section id="contact" className="contact-section shell"><p className="section-number">10 / Contact</p><h2>Have a meaningful problem to solve?</h2><Link href="/contact">Start a conversation <ArrowUpRight /></Link></section>
   </main><footer><div className="shell"><p>Junior Rafael Carpenter</p><p>Creator of Jeicy Apps - Building JC products.</p><p>&copy; {new Date().getFullYear()}</p></div></footer></>;
 }
 

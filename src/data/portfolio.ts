@@ -14,6 +14,14 @@ export const socialLinks = [
   { label: "Email", href: `mailto:${profile.email}` },
 ] as const;
 
+export const availabilityDetails = [
+  { label: "Opportunities", value: "Senior software engineering, product development, and meaningful collaborations" },
+  { label: "Work model", value: "Remote, hybrid, or on-site opportunities can be discussed" },
+  { label: "Location", value: "Dominican Republic" },
+  { label: "Time zone", value: "Atlantic Standard Time (UTC-4)" },
+  { label: "Languages", value: "Spanish and English" },
+] as const;
+
 export const navigation = [
   { label: "About", href: "/#about" }, { label: "Work", href: "/#work" },
   { label: "Experience", href: "/#experience" }, { label: "Education", href: "/#education" }, { label: "Skills", href: "/#skills" },
