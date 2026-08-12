@@ -15,9 +15,8 @@ export const socialLinks = [
 ] as const;
 
 export const navigation = [
-  { label: "About", href: "/#about" }, { label: "Work", href: "/#work" }, { label: "Jeicy Apps", href: "/#jeicy-apps" },
+  { label: "About", href: "/#about" }, { label: "Work", href: "/#work" },
   { label: "Experience", href: "/#experience" }, { label: "Education", href: "/#education" }, { label: "Skills", href: "/#skills" },
-  { label: "Principles", href: "/#principles" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
