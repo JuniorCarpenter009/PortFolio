@@ -20,9 +20,9 @@ export const navigation = [
 ] as const;
 
 export const products = [
-  { name: "JC Finance", status: "In development", description: "A personal finance and financial intelligence product that helps people understand spending, budgets, goals, and financial behavior.", stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Docker"], featured: true },
-  { name: "JC Hub", status: "Architecture stage", description: "A future unified platform for accessing and organizing the growing family of JC applications.", stack: ["Platform", "Product ecosystem"], featured: true },
-  { name: "JC Fitness", status: "Planned", description: "A focused product concept for building healthier routines and tracking progress.", stack: ["Product research"], featured: false },
+  { name: "JC Finance", status: "In development", description: "A personal finance and financial intelligence product that helps people understand spending, budgets, goals, and financial behavior.", stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Docker"], featured: true, href: "/projects/jc-finance" },
+  { name: "JC Hub", status: "Architecture stage", description: "A future unified platform for accessing and organizing the growing family of JC applications.", stack: ["Platform", "Product ecosystem"], featured: true, href: null },
+  { name: "JC Fitness", status: "Planned", description: "A focused product concept for building healthier routines and tracking progress.", stack: ["Product research"], featured: false, href: null },
 ] as const;
 
 export const expertise = [
