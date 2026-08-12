@@ -14,7 +14,7 @@ export const socialLinks = [
 ] as const;
 
 export const navigation = [
-  { label: "About", href: "/#about" }, { label: "Work", href: "/#work" },
+  { label: "About", href: "/#about" }, { label: "Work", href: "/#work" }, { label: "Jeicy Apps", href: "/#jeicy-apps" },
   { label: "Experience", href: "/#experience" }, { label: "Education", href: "/#education" }, { label: "Skills", href: "/#skills" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -23,6 +23,9 @@ export const products = [
   { name: "JC Finance", status: "In development", description: "A personal finance and financial intelligence product that helps people understand spending, budgets, goals, and financial behavior.", stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Docker"], featured: true, href: "/projects/jc-finance" },
   { name: "JC Hub", status: "Architecture stage", description: "A future unified platform for accessing and organizing the growing family of JC applications.", stack: ["Platform", "Product ecosystem"], featured: true, href: null },
   { name: "JC Fitness", status: "Planned", description: "A focused product concept for building healthier routines and tracking progress.", stack: ["Product research"], featured: false, href: null },
+  { name: "JC Books", status: "Planned", description: "A product concept for organizing reading, discovery, and personal knowledge around books.", stack: ["Product concept"], featured: false, href: null },
+  { name: "JC Knowledge", status: "Research", description: "An exploration of practical ways to capture, connect, and retrieve useful personal knowledge.", stack: ["Product research"], featured: false, href: null },
+  { name: "JC Goals", status: "Planned", description: "A future product for translating meaningful goals into visible, sustainable progress.", stack: ["Product concept"], featured: false, href: null },
 ] as const;
 
 export const expertise = [
