@@ -14,9 +14,9 @@ export const socialLinks = [
 ] as const;
 
 export const navigation = [
-  { label: "About", href: "#about" }, { label: "Work", href: "#work" },
-  { label: "Experience", href: "#experience" }, { label: "Education", href: "#education" }, { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" }, { label: "Work", href: "/#work" },
+  { label: "Experience", href: "/#experience" }, { label: "Education", href: "/#education" }, { label: "Skills", href: "/#skills" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const products = [
@@ -62,4 +62,15 @@ export const skillGroups = [
   { title: "Cloud & DevOps", items: ["Azure", "Docker", "Kubernetes", "Git", "CI/CD"] },
   { title: "Testing & Architecture", items: ["Unit Testing", "xUnit", "NUnit", "Clean Architecture", "Continuous Integration"] },
   { title: "Artificial Intelligence", items: ["Python", "Scikit-learn", "Microsoft Semantic Kernel", "OpenAI API", "Prompt Engineering"] },
+] as const;
+
+export const certifications = [
+  { title: "Foundational C# with Microsoft", category: "Backend" },
+  { title: "Fundamentals of DevOps, APIs, and Microservices Architecture", category: "Architecture" },
+  { title: "Master's in SQL Server", category: "Database" },
+  { title: "Kubernetes and Docker with .NET", category: "Cloud & DevOps" },
+  { title: "Git & GitHub", category: "Developer tools" },
+  { title: "Unit Testing .NET", category: "Testing" },
+  { title: "React", category: "Frontend" },
+  { title: "Introduction to Artificial Intelligence", category: "Artificial Intelligence" },
 ] as const;
