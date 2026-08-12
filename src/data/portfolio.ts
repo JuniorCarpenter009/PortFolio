@@ -8,6 +8,7 @@ export const profile = {
 } as const;
 
 export const socialLinks = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/junior-rafael-carpenter-b506481a3/" },
   { label: "GitHub", href: "https://github.com/JuniorCarpenter009" },
   { label: "Instagram", href: "https://www.instagram.com/jr__carpenter09/" },
   { label: "Email", href: `mailto:${profile.email}` },

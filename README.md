@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Junior Rafael Carpenter - Portfolio
 
-## Getting Started
+Personal professional portfolio for Junior Rafael Carpenter, Senior Full Stack Developer and creator of Jeicy Apps.
 
-First, run the development server:
+The site presents verified professional experience, selected case notes, technical capabilities, education, certifications, and the evolving Jeicy Apps product ecosystem. It deliberately separates Junior's professional identity, the Jeicy Apps product brand, and JC Hub as a future platform.
+
+## Highlights
+
+- Professional and Astronaut visual appearances
+- Light, dark, and system color themes
+- Responsive, accessible portfolio experience
+- Verified professional outcomes with responsible disclosure
+- Dedicated JC Finance product case study
+- Downloadable professional CV
+- Secure contact endpoint prepared for Resend
+- Static project routes, metadata, sitemap, robots, and social preview image
+
+## Technology
+
+- Next.js 15 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- next-themes
+- Lucide React
+
+## Local development
+
+Requirements: Node.js 20 or later and pnpm 9.15.9.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+corepack pnpm@9.15.9 install
+corepack pnpm@9.15.9 dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The default Next.js address is `http://localhost:3000`. A different port can be selected with `-p` when another application already uses it.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contact delivery
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and provide:
 
-## Learn More
+```env
+RESEND_API_KEY=re_replace_with_your_key
+CONTACT_TO_EMAIL=Junior.Rafael.Carpenter@gmail.com
+CONTACT_FROM_EMAIL=Junior Carpenter Portfolio <contact@yourdomain.com>
+```
 
-To learn more about Next.js, take a look at the following resources:
+`CONTACT_FROM_EMAIL` must use a domain verified in Resend. Secrets must never be committed. Without these variables, the interface returns a friendly configuration message and directs visitors to the visible email address.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The contact route validates all input on the server, escapes rendered content, uses a honeypot, enforces a minimum completion time, applies a lightweight request limit, and sets the visitor's address as `Reply-To`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Quality checks
 
-## Deploy on Vercel
+```bash
+corepack pnpm@9.15.9 lint
+corepack pnpm@9.15.9 build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project is compatible with Vercel. Configure the three contact variables for Preview and Production, connect the verified domain, then deploy the `main` branch.
+
+The canonical production URL is currently configured as `https://juniorcarpenter.dev`. Update `metadataBase`, `sitemap.ts`, and the Resend sender domain together if a different domain is selected.
+
+## Content policy
+
+Only public-safe and confirmed professional information is published. Planned products are labeled by their real stage, and confidential implementation details are intentionally excluded.
+
+## Author
+
+Junior Rafael Carpenter
+
+- [LinkedIn](https://www.linkedin.com/in/junior-rafael-carpenter-b506481a3/)
+- [GitHub](https://github.com/JuniorCarpenter009)
+- [Instagram](https://www.instagram.com/jr__carpenter09/)
