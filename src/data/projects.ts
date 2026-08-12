@@ -1,8 +1,10 @@
 export const professionalProjects = [
-  { title: "Mobile Application Development", outcome: "50%", outcomeLabel: "faster processing", description: "Barcode-scanning optimization work that improved processing speed by 50%.", disclosure: "Additional technical details remain private until they can be shared safely." },
-  { title: "Printing Module", outcome: "30%", outcomeLabel: "faster response", description: "A printing module improvement that reduced response time by 30%.", disclosure: "Presented as a verified outcome without exposing confidential implementation details." },
-  { title: "Application Migration", outcome: "20%", outcomeLabel: "less downtime", description: "Application migration work that reduced downtime by 20%.", disclosure: "The organization and internal architecture are intentionally not disclosed." },
+  { slug: "mobile-application-development", title: "Mobile Application Development", outcome: "50%", outcomeLabel: "faster processing", description: "Barcode-scanning optimization work that improved processing speed by 50%.", disclosure: "Additional technical details remain private until they can be shared safely." },
+  { slug: "printing-module", title: "Printing Module", outcome: "30%", outcomeLabel: "faster response", description: "A printing module improvement that reduced response time by 30%.", disclosure: "Presented as a verified outcome without exposing confidential implementation details." },
+  { slug: "application-migration", title: "Application Migration", outcome: "20%", outcomeLabel: "less downtime", description: "Application migration work that reduced downtime by 20%.", disclosure: "The organization and internal architecture are intentionally not disclosed." },
 ] as const;
+
+export type ProfessionalProjectSlug = (typeof professionalProjects)[number]["slug"];
 
 export const projectCaseStudies = {
   "jc-finance": {
