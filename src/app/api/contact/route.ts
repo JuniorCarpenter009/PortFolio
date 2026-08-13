@@ -41,22 +41,28 @@ export async function POST(request: NextRequest) {
   if (name.length > 100 || email.length > 254 || subject.length > 140 || message.length > 3000) return NextResponse.json({ message: "One or more fields are longer than allowed." }, { status: 400 });
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
+  const to = process.env.CONTACT_TO_EMAIL?.trim().toLowerCase();
   const from = process.env.CONTACT_FROM_EMAIL;
   if (!apiKey || !to || !from) return NextResponse.json({ message: "Direct messaging is being configured. Please use the email address shown on this page for now." }, { status: 503 });
 
-  const resendResponse = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      reply_to: email,
-      subject: `[Portfolio] ${subject}`,
-      text: `${message}\n\nFrom: ${name}\nReply to: ${email}`,
-      html: `<h2>New portfolio message</h2><p><strong>From:</strong> ${escapeHtml(name)}</p><p><strong>Reply to:</strong> ${escapeHtml(email)}</p><p><strong>Subject:</strong> ${escapeHtml(subject)}</p><hr><p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>`,
-    }),
-  });
+  let resendResponse: Response;
+  try {
+    resendResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from,
+        to: [to],
+        reply_to: email.toLowerCase(),
+        subject: `[Portfolio] ${subject}`,
+        text: `${message}\n\nFrom: ${name}\nReply to: ${email}`,
+        html: `<h2>New portfolio message</h2><p><strong>From:</strong> ${escapeHtml(name)}</p><p><strong>Reply to:</strong> ${escapeHtml(email)}</p><p><strong>Subject:</strong> ${escapeHtml(subject)}</p><hr><p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>`,
+      }),
+    });
+  } catch (error) {
+    console.error("Contact email provider could not be reached", { error: error instanceof Error ? error.message : "Unknown network error" });
+    return NextResponse.json({ message: "The email service is temporarily unavailable. Please try again shortly or use the email address shown on this page." }, { status: 503 });
+  }
 
   if (!resendResponse.ok) {
     console.error("Contact email provider rejected the request", { status: resendResponse.status });
